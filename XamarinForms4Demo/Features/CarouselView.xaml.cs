@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
-using XamarinForms4Demo.Features;
 
-namespace XamarinForms4Demo
+namespace XamarinForms4Demo.Features
 {
-    public partial class AppShell : Xamarin.Forms.Shell
+    public partial class CarouselView : ContentPage
     {
-        public AppShell()
+        public CarouselView()
         {
             InitializeComponent();
         }

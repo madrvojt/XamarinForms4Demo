@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:local="clr-namespace:XamarinForms4Demo.Views" Title="XamarinForms4Demo" x:Class="XamarinForms4Demo.AppShell">
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+       xmlns:views="clr-namespace:XamarinForms4Demo.Views"
+       xmlns:features="clr-namespace:XamarinForms4Demo.Features"
+       xmlns:controls="clr-namespace:XamarinForms4Demo.Controls" Title="XamarinForms4Demo"
+       x:Class="XamarinForms4Demo.AppShell"
+       FlyoutBehavior="Disabled"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       >
+    <Shell.Resources>
+         <OnPlatform
+            x:Key="SegMDL2"
+            x:TypeArguments="x:String"
+            Android="SegMDL2.ttf#Segoe MDL2 Assets"
+            iOS="Segoe MDL2 Assets"
+        />
+    </Shell.Resources>
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader />
+    </Shell.FlyoutHeader>
+
+
+
     <!-- 
         Styles and Resources 
     -->
-    <Shell.Resources>
+    <!--<Shell.Resources>
         <ResourceDictionary>
             <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
@@ -19,17 +44,42 @@
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
-    </Shell.Resources>
+    </Shell.Resources>-->
     <!-- Your Pages -->
-    <TabBar>
-        <Tab Title="Browse" Icon="tab_feed.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
-        </Tab>
-        <Tab Title="About" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
-        </Tab>
-    </TabBar>
-    <!-- Optional Templates 
+    <FlyoutItem Title="HomePage">
+            <ShellContent ContentTemplate="{DataTemplate views:InvitationPage}" Title="Page1" />
+
+    </FlyoutItem>
+    <FlyoutItem Title="Shell features" Route="">
+        <Tab Title="Page1">
+            <Tab.Icon>
+                   <FontImageSource FontFamily="{StaticResource SegMDL2}" Glyph="&#xE708;" Color="Red" />
+            </Tab.Icon>
+
+            <ShellContent ContentTemplate="{DataTemplate features:ShellPushPage1}" />
+               <ShellContent ContentTemplate="{DataTemplate features:ShellPushPage1}" />
+
+                </Tab>
+
+            <ShellContent ContentTemplate="{DataTemplate features:ShellPushPage1}" Title="Page2">
+            <ShellContent.Icon>
+                   <FontImageSource FontFamily="{StaticResource SegMDL2}" Glyph="&#xE708;" Color="Azure"/>
+            </ShellContent.Icon>
+          </ShellContent>
+    </FlyoutItem>
+      <FlyoutItem Title="Visual">
+            <ShellContent ContentTemplate="{DataTemplate features:VisualPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="CollectionView">
+            <ShellContent ContentTemplate="{DataTemplate features:CollectionViewPage}"/>
+    </FlyoutItem>
+     <FlyoutItem Title="SmallFeatures">
+            <ShellContent ContentTemplate="{DataTemplate features:SmallFeaturesPage}"/>
+    </FlyoutItem>
+     <FlyoutItem Title="CarouselView">
+            <ShellContent ContentTemplate="{DataTemplate features:CarouselView}"/>
+    </FlyoutItem>
+    <!-- Optional Templates   
     // These may be provided inline as below or as separate classes.
 
     // This header appears at the top of the Flyout.

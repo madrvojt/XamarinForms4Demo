@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
-using XamarinForms4Demo.Features;
 
-namespace XamarinForms4Demo
+namespace XamarinForms4Demo.Views
 {
-    public partial class AppShell : Xamarin.Forms.Shell
+    public partial class InvitationPage : ContentPage
     {
-        public AppShell()
+        public InvitationPage()
         {
             InitializeComponent();
         }

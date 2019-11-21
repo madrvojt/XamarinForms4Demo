@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinForms4Demo.Features;
 using XamarinForms4Demo.Services;
 using XamarinForms4Demo.Views;
 
@@ -15,6 +16,8 @@ namespace XamarinForms4Demo
 
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+            Routing.RegisterRoute("shellpush", typeof(ShellPushPage2));
+
         }
 
         protected override void OnStart()

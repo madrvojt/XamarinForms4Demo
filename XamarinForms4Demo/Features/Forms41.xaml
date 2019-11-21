@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinForms4Demo.Features.SmallFeatures">
+
+    <StackLayout>
+    <StackLayout HorizontalOptions="Center">
+        <Label Text="Check BOX" FontSize="32"/> 
+        <CheckBox Color="Blue"/>
+        <CheckBox Color="Black" Visual="Material"/>
+    </StackLayout>
+
+               <Entry Placeholder="Delete" ClearButtonVisibility="WhileEditing" />
+
+
+
+
+      <StackLayout HorizontalOptions="Center">
+        <Label Text="Invoke main thread" FontSize="32"/> 
+        </StackLayout>
+
+        </StackLayout>
+</ContentPage>
