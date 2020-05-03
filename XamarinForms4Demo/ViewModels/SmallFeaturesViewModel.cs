@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace XamarinForms4Demo.ViewModels
@@ -12,7 +13,7 @@ namespace XamarinForms4Demo.ViewModels
      
         public SmallFeaturesViewModel()
         {
-
+            
             CLickCommand = new Command(async () => {
 
                 await Device.InvokeOnMainThreadAsync(() => {

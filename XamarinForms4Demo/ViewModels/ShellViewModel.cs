@@ -6,24 +6,13 @@ namespace XamarinForms4Demo.ViewModels
 {
     public class ShellViewModel
     {
-
-        public ICommand CLickCommand { get; set; }
-
-
+        public ICommand ClickCommand { get; set; }
+        
         public ShellViewModel()
         {
-            CLickCommand = new Command(async () => {
-
-
+            ClickCommand = new Command(async () => {
                 await Shell.Current.GoToAsync("shellpush?name=tralala", true);
-
-                
             });
         }
-
-
-       
-
-
     }
 }

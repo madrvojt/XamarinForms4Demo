@@ -3,6 +3,6 @@
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
      x:Class="XamarinForms4Demo.Views.InvitationPage">
     <ContentPage.Content>
-        <Label Text="Welcome in Xamarin Forms 4.2 Presentation" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Label Text="Welcome in Xamarin Forms 4.0 Presentation" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
     </ContentPage.Content>
 </ContentPage>

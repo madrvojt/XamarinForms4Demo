@@ -16,5 +16,7 @@
                 <Label Text="Invoke main thread" FontSize="32"/>
                 <Button Text="FIRE on main thread!!" Command="{Binding CLickCommand}"/>
              </StackLayout>
+        
+           
         </StackLayout>
 </ContentPage>
